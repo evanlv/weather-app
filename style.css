@@ -44,16 +44,16 @@ h1 {
 .bloc-ingo {
   width: 50%;
 }
-.bloc-info .weather {
+.bloc-info .weather-app {
   font-size: 40px;
 }
-.bloc-info .weather::first-letter {
+.bloc-info .weather-app::first-letter {
   text-transform: capitalize;
 }
-.bloc-info .temperature {
+.bloc-info .temperature-app {
   font-size: 60px;
 }
-.bloc-info .location {
+.bloc-info .location-app {
   font-size: 40px;
   word-wrap: break-word;
 }
