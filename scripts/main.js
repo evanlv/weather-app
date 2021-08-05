@@ -24,14 +24,16 @@ if (navigator.geolocation) {
 }
 const callApi = (long, lat) => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&appid=${API_KEY}`
   )
     .then((response) => {
       return response.json();
     })
     .then((data) => {
       resultsApi = data;
-      console.log(data);
+
+      // console.log(data);
+
       weatherApp.innerText = resultsApi.current.weather[0].description;
       temperatureApp.innerText = `${Math.trunc(
         resultsApi.current.temperature
@@ -42,14 +44,14 @@ const callApi = (long, lat) => {
       let actualHour = new Date().getHours();
 
       for (let i = 0; i < hour.length; i++) {
-        let hourIncr = actualHour + i * 3;
+        let incrHour = actualHour + i * 3;
 
-        if (hourIncr > 24) {
-          hour[i].innerText = `${hourIncr - 24} h`;
-        } else if (hourIncr === 24) {
+        if (incrHour > 24) {
+          hour[i].innerText = `${incrHour - 24} h`;
+        } else if (incrHour === 24) {
           hour[i].innerText = "00 h";
         } else {
-          hour[i].innerText = `${hourIncr} h`;
+          hour[i].innerText = `${incrHour} h`;
         }
       }
 
