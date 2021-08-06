@@ -15,8 +15,8 @@ let actualDay = today.toLocaleDateString("en-EN", options);
 actualDay = actualDay.charAt(0).toUpperCase() + actualDay.slice(1);
 console.log(actualDay);
 
-let orderedDay = week
+let orderedDays = week
   .slice(week.indexOf(actualDay))
   .concat(week.slice(0, week.indexOf(actualDay)));
 
-console.log(orderedDay);
+export default orderedDays;

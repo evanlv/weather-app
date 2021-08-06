@@ -6,15 +6,19 @@
     <title>WeatherApp</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <div class="container">
+      <div class="overlay-icon-loading">
+        <img src="resources/loading/circles.svg" alt="loading icon" />
+      </div>
       <h1>Weather App</h1>
       <div class="bloc-logo-info">
         <div class="bloc-logo">
           <img
-            src="./ressources/jour/04d.svg"
-            class="logo-meteo"
-            alt="Actual weather logo"
+            src="./resources/day/04d.svg"
+            class="logo-weather"
+            alt="Weather logo"
           />
         </div>
         <div class="bloc-info">
@@ -83,13 +87,9 @@
           <p class="day-prevision-name"></p>
           <p class="day-prevision-temperature"></p>
         </div>
-        <div class="bloc-j">
-          <p class="day-prevision-name"></p>
-          <p class="day-prevision-temperature"></p>
-        </div>
-      </div>
     </div>
-    <script src="./scripts/Utilitaire/gestionTemps.js "></script>
+    
     <script type="module" src="scripts/main.js"></script>
   </body>
+
 </html>
