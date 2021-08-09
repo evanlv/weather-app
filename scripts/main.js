@@ -39,9 +39,7 @@ const callApi = (long, lat) => {
       resultsApi = data;
 
       weatherApp.innerText = resultsApi.current.weather[0].description;
-      temperatureApp.innerText = `${Math.trunc(
-        resultsApi.current.temperature
-      )}℃`;
+      temperatureApp.innerText = `${Math.trunc(resultsApi.current.temp)}℃`;
       locationApp.innerText = resultsApi.timezone;
 
       // Hours, every 3h, with their temperature
